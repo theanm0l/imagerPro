@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "870694120869",
+    "project_id": "imagerpro-92380",
+    "storage_bucket": "imagerpro-92380.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870694120869:android:ca81a3421341c254220c4c",
+        "android_client_info": {
+          "package_name": "com.example.project_new"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870694120869-k807lg3o4i0lek98tqbihu84n6ggqmtu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXrfVezUMwLTPBiIjbTSoMvOgYOuFXERM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870694120869-1gh0rdq7aju6ub3148snb1jd568aaij8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

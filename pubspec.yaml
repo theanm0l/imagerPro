@@ -39,6 +39,10 @@ dependencies:
   rive: ^0.10.2
   google_fonts: ^4.0.3
   lottie: ^2.2.0
+  firebase_auth: ^4.2.10
+  google_sign_in: ^6.0.2
+  provider: ^6.0.5
+  font_awesome_flutter: ^10.4.0
 
 dev_dependencies:
   flutter_test:

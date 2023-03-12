@@ -1,7 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
+import 'package:project_new/google_sign_in.dart';
+import 'package:provider/provider.dart';
 import 'package:rive/rive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -113,17 +116,22 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                     SizedBox(
                                       height: 30,
                                       width: 250,
-                                      child: ElevatedButton(
+                                      child: ElevatedButton.icon(
                                           style: ElevatedButton.styleFrom(
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(60),
                                             ),
-                                            backgroundColor: Colors.red,
+                                            backgroundColor: Colors.white,
                                             foregroundColor: Colors.blue,
+
                                           ),
-                                          onPressed: onPressed,
-                                          child: const Text('Sign up')),
+                                          onPressed: (){
+                                            final provider =Provider.of<GoogleSignProvider>(context,listen:false);
+                                            provider.googleLogin();
+                                          },
+                                          icon: FaIcon(FontAwesomeIcons.google),
+                                          label:  Text('Login With Google')),
                                     ),
                                     const SizedBox(
                                       height: 30,
@@ -141,7 +149,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             foregroundColor: Colors.red,
                                           ),
                                           onPressed: onPressed,
-                                          child: Text('Login')),
+                                          child: Text('Login With Mobile')),
                                     ),
                                   ],
                                 ),
