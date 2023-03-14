@@ -3,7 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_new/OnbodingScreen.dart';
 import 'package:project_new/loggedin.dart';
 
-class homepage extends StatelessWidget {
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
+
 
 
   @override
