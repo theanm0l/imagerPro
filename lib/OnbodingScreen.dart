@@ -98,12 +98,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                      const Color.fromRGBO(250, 250, 250, 1.0),
                                 body: Column(
                                   children: [
-                                    Text("Welcome",
-                                        style: GoogleFonts.poppins(
-                                          textStyle: const TextStyle(
-                                              fontSize: 34,
-                                              fontFamily: "Poppins"),
-                                        )),
+
                                     Text(
                                       "Get Access to Hundreds of options to  Customizing your document at single place ",
                                       style: GoogleFonts.poppins(
@@ -111,7 +106,12 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                         fontSize: 20,
                                       )),
                                     ),
-                                    Lottie.asset(
+                                    Text("Welcome",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontSize: 34,
+                                              fontFamily: "Poppins"),
+                                        )),            Lottie.asset(
                                       'assets/welcomescreenanimation.json',
                                       repeat: true,
                                       reverse: true,
@@ -135,7 +135,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             provider.googleLogin();
                                             Navigator.pop(context);
                                           },
-                                          icon: const FaIcon(FontAwesomeIcons.google),
+                                          icon: FaIcon(FontAwesomeIcons.google),
                                           label:  const Text('Login With Google')),
 
                                     ),
@@ -155,7 +155,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             foregroundColor: Colors.red,
                                           ),
                                           onPressed: onPressed,
-                                          child: const Text('Login With Mobile')),
+                                          child: Text('Login With Mobile')),
                                     ),
                                   ],
                                 ),

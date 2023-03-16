@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:project_new/navigation_drawer.dart';
 import 'package:provider/provider.dart';
 import 'Authentication/google_sign_in.dart';
 
@@ -15,6 +16,10 @@ class loggedin extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        drawer: NavigationDrawerWidget(),
+        appBar: AppBar(
+
+        ),
         body: Stack(
           children: [
             Container(
@@ -103,31 +108,6 @@ class loggedin extends StatelessWidget {
                       bottomRight: Radius.circular(40))),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(25.0),
-                        child: Icon(
-                          Icons.menu_outlined,
-                          size: 40,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Padding(
-                          padding: const EdgeInsets.all(32.0),
-                          child: TextButton(
-                            child: const Text('Logout',
-                            style: TextStyle(
-                              color: Colors.white
-                            ),),
-                            onPressed: () {
-                              final provider = Provider.of<GoogleSignProvider>(context, listen: false);
-                              provider.logout();
-                            },
-                          )),
-                    ],
-                  ),
                   const Align(
                     alignment: Alignment.topLeft,
                     child: Padding(
@@ -186,7 +166,7 @@ class loggedin extends StatelessWidget {
               width: 10,
             ),
             Positioned(
-                top: 145,
+                top: 80,
                 left: 20,
                 width: 100,
                 height: 100,
