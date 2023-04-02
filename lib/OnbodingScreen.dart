@@ -74,7 +74,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                             borderRadius: BorderRadius.circular(50)),
                         backgroundColor: Colors.white, // background
                         foregroundColor: Colors.black, // foreground
-                      ),
+                        ),
                       onPressed: () {
                         showDialog(
                           context: context,
