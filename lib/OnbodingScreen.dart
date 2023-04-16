@@ -135,7 +135,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             provider.googleLogin();
                                             Navigator.pop(context);
                                           },
-                                          icon: FaIcon(FontAwesomeIcons.google),
+                                          icon: const FaIcon(FontAwesomeIcons.google),
                                           label:  const Text('Login With Google')),
 
                                     ),
@@ -155,7 +155,7 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             foregroundColor: Colors.red,
                                           ),
                                           onPressed: onPressed,
-                                          child: Text('Login With Mobile')),
+                                          child: const Text('Login With Mobile')),
                                     ),
                                   ],
                                 ),
