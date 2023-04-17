@@ -1,9 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:project_new/Authentication/google_sign_in.dart';
+import 'package:project_new/Authentication/homepage.dart';
 import 'package:provider/provider.dart';
-
-import 'featureScreen.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         create: (context) => GoogleSignProvider(),
         child: const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: featureScreen(),
+          home: Homepage(),
         ),
       );
 }
