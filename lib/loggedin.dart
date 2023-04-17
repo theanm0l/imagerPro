@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_new/navigation_drawer.dart';
-import 'package:provider/provider.dart';
-import 'Authentication/google_sign_in.dart';
 
 
 class loggedin extends StatelessWidget {
