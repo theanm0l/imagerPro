@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:project_new/feature_screen.dart';
 import 'package:project_new/navigation_drawer.dart';
 
-
-class loggedin extends StatelessWidget {
+class LoggedIn extends StatelessWidget {
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
-   loggedin({super.key});
+  LoggedIn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,7 @@ class loggedin extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         drawer: NavigationDrawerWidget(),
-        appBar: AppBar(
-
-        ),
+        appBar: AppBar(),
         body: Stack(
           children: [
             Container(
@@ -90,11 +88,21 @@ class loggedin extends StatelessWidget {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
+                      children: [
                         Icon(Icons.camera_alt,
                             size: 30, color: Colors.blueAccent),
                         VerticalDivider(),
-                        Icon(Icons.image, size: 30, color: Colors.blueAccent),
+                        InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => FeatureScreen(),
+                                ),
+                              );
+                            },
+                            child: Icon(Icons.image,
+                                size: 30, color: Colors.blueAccent)),
                       ]),
                 )),
             Container(
