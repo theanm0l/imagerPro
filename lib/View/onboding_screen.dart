@@ -67,117 +67,110 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                 ),
                 SizedBox(
                   height: 50,
-                  child: SizedBox(
-                    height: 50,
-                    width: 200,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50)),
-                        backgroundColor: Colors.white, // background
-                        foregroundColor: Colors.black, // foreground
-                      ),
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) => Center(
-                            child: Container(
-                              height: 630,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 20),
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 50, horizontal: 30),
-                              decoration: const BoxDecoration(
-                                color: Color.fromRGBO(
-                                    255, 255, 255, 0.9921568627450981),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(40)),
-                              ),
-                              child: Scaffold(
-                                resizeToAvoidBottomInset: true,
-                                backgroundColor:
-                                    const Color.fromRGBO(250, 250, 250, 1.0),
-                                body: Column(
-                                  children: [
-                                    Text(
-                                      "Get Access to Hundreds of options to  Customizing your document at single place ",
-                                      style: GoogleFonts.poppins(
-                                          textStyle: const TextStyle(
-                                        fontSize: 20,
-                                      )),
-                                    ),
-                                    Text("Welcome",
+                  child: Center(
+                    child: SizedBox(
+                      height: 50,
+                      width: 200,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50)),
+                          backgroundColor: Colors.white, // background
+                          foregroundColor: Colors.black, // foreground
+                        ),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) => Center(
+                              child: Container(
+                                height: 630,
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 50, horizontal: 30),
+                                decoration: const BoxDecoration(
+                                  color: Color.fromRGBO(
+                                      255, 255, 255, 0.9921568627450981),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(40)),
+                                ),
+                                child: Scaffold(
+                                  resizeToAvoidBottomInset: true,
+                                  backgroundColor:
+                                      const Color.fromRGBO(250, 250, 250, 1.0),
+                                  body: Column(
+                                    children: [
+                                      Text(
+                                        "Get Access to Hundreds of options to  Customizing your document at single place ",
                                         style: GoogleFonts.poppins(
-                                          textStyle: const TextStyle(
-                                              fontSize: 34,
-                                              fontFamily: "Poppins"),
+                                            textStyle: const TextStyle(
+                                          fontSize: 20,
                                         )),
-                                    Lottie.asset(
-                                      'assets/welcomescreenanimation.json',
-                                      repeat: true,
-                                      reverse: true,
-                                      animate: true,
-                                    ),
-                                    SizedBox(
-                                      height: 30,
-                                      width: 250,
-                                      child: ElevatedButton.icon(
-                                          style: ElevatedButton.styleFrom(
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(60),
-                                            ),
-                                            backgroundColor: Colors.white,
-                                            foregroundColor: Colors.blue,
-                                          ),
-                                          onPressed: () {
-                                            final provider =
-                                                Provider.of<GoogleSignProvider>(
-                                                    context,
-                                                    listen: false);
-                                            provider.googleLogin();
-                                            Navigator.pop(context);
-                                          },
-                                          icon: const FaIcon(
-                                              FontAwesomeIcons.google),
-                                          label:
-                                              const Text('Login With Google')),
-                                    ),
-                                    const SizedBox(
-                                      height: 30,
-                                      width: 0,
-                                    ),
-                                    SizedBox(
-                                      height: 30,
-                                      width: 250,
-                                      child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            shape: RoundedRectangleBorder(
+                                      ),
+                                      Text("Welcome",
+                                          style: GoogleFonts.poppins(
+                                            textStyle: const TextStyle(
+                                                fontSize: 34,
+                                                fontFamily: "Poppins"),
+                                          )),
+                                      Lottie.asset(
+                                        'assets/welcomescreenanimation.json',
+                                        repeat: true,
+                                        reverse: true,
+                                        animate: true,
+                                      ),
+                                      SizedBox(
+                                        height: 30,
+                                        width: 250,
+                                        child: ElevatedButton.icon(
+                                            style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
                                                 borderRadius:
-                                                    BorderRadius.circular(50)),
-                                            backgroundColor: Colors.blue,
-                                            foregroundColor: Colors.red,
-                                          ),
-                                          onPressed: onPressed,
-                                          child:
-                                              const Text('Login With Mobile')),
-                                    ),
-                                  ],
+                                                    BorderRadius.circular(60),
+                                              ),
+                                              backgroundColor: Colors.white,
+                                              foregroundColor: Colors.blue,
+                                            ),
+                                            onPressed: () {
+                                              final provider = Provider.of<
+                                                      GoogleSignProvider>(
+                                                  context,
+                                                  listen: false);
+                                              provider.googleLogin();
+                                              Navigator.pop(context);
+                                            },
+                                            icon: const FaIcon(
+                                                FontAwesomeIcons.google),
+                                            label: const Text(
+                                                'Login With Google')),
+                                      ),
+                                      const SizedBox(
+                                        height: 30,
+                                        width: 0,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
+                          );
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(1.0),
+                          child: SizedBox(
+                            child: Center(
+                              heightFactor: 23,
+                              widthFactor: 24,
+                              child: Text('Get Started',
+                                  style: GoogleFonts.poppins(
+                                      textStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromRGBO(183, 150, 243, 1.0),
+                                  ))),
+                            ),
                           ),
-                        );
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: Text('Get Started',
-                            style: GoogleFonts.poppins(
-                                textStyle: const TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(183, 150, 243, 1.0),
-                            ))),
+                        ),
                       ),
                     ),
                   ),

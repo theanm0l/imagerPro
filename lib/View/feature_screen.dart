@@ -3,9 +3,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:project_new/View/compression_screen.dart';
 
 class FeatureScreen extends StatelessWidget {
-  const FeatureScreen({Key? key, required File image}) : super(key: key);
+  final File? image;
+
+  const FeatureScreen({Key? key, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +92,15 @@ class FeatureScreen extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                (context),
+                MaterialPageRoute(
+                    builder: (context) => CompressionScreen(
+                          image: image!,
+                        )),
+              );
+            },
             child: Container(
               padding: EdgeInsets.all(30),
               margin: EdgeInsets.all(10),
