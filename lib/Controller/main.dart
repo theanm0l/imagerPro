@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:project_new/Authentication/google_sign_in.dart';
-import 'package:project_new/Authentication/homepage.dart';
+import 'package:project_new/Controller//google_sign_in.dart';
+import 'package:project_new/Controller//homepage.dart';
 import 'package:provider/provider.dart';
 
 Future main() async {

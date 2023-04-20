@@ -1,12 +1,15 @@
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:project_new/feature_screen.dart';
+import 'package:project_new/View//feature_screen.dart';
 
 class LoggedIn extends StatefulWidget {
+  const LoggedIn({super.key});
+
   @override
   State<LoggedIn> createState() => _LoggedInState();
 }
@@ -21,16 +24,16 @@ class _LoggedInState extends State<LoggedIn> {
       }
       final imageTemporary = File(image.path);
       setState(() {
-        this._image = imageTemporary;
-      });
-
-      // Navigate to FeatureScreen
+        _image = imageTemporary;
+      }); // Navigate to FeatureScreen
       Navigator.push(
-        context,
+        (context),
         MaterialPageRoute(builder: (context) => FeatureScreen(image: _image!)),
       );
     } on PlatformException catch (e) {
-      print('Failed to Pick Image $e');
+      if (kDebugMode) {
+        print('Failed to Pick Image $e');
+      }
     }
   }
 

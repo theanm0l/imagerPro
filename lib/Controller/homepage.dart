@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:project_new/loggedin.dart';
-import 'package:project_new/onboding_screen.dart';
+import 'package:project_new/View/loggedin.dart';
+import 'package:project_new/View/onboding_screen.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});

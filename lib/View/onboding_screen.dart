@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:project_new/Authentication/google_sign_in.dart';
+import 'package:project_new/Controller//google_sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:rive/rive.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class OnbodingScreen extends StatefulWidget {
   const OnbodingScreen({super.key});
@@ -24,8 +24,10 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
-          const RiveAnimation.asset("assets/circlesscreen.riv"
-          , fit: BoxFit.fill,),
+          const RiveAnimation.asset(
+            "assets/circlesscreen.riv",
+            fit: BoxFit.fill,
+          ),
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
@@ -74,11 +76,10 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                             borderRadius: BorderRadius.circular(50)),
                         backgroundColor: Colors.white, // background
                         foregroundColor: Colors.black, // foreground
-                        ),
+                      ),
                       onPressed: () {
                         showDialog(
                           context: context,
-
                           builder: (BuildContext context) => Center(
                             child: Container(
                               height: 630,
@@ -95,10 +96,9 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                               child: Scaffold(
                                 resizeToAvoidBottomInset: true,
                                 backgroundColor:
-                                     const Color.fromRGBO(250, 250, 250, 1.0),
+                                    const Color.fromRGBO(250, 250, 250, 1.0),
                                 body: Column(
                                   children: [
-
                                     Text(
                                       "Get Access to Hundreds of options to  Customizing your document at single place ",
                                       style: GoogleFonts.poppins(
@@ -111,7 +111,8 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                           textStyle: const TextStyle(
                                               fontSize: 34,
                                               fontFamily: "Poppins"),
-                                        )),            Lottie.asset(
+                                        )),
+                                    Lottie.asset(
                                       'assets/welcomescreenanimation.json',
                                       repeat: true,
                                       reverse: true,
@@ -128,16 +129,19 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             ),
                                             backgroundColor: Colors.white,
                                             foregroundColor: Colors.blue,
-
                                           ),
-                                          onPressed: (){
-                                            final provider =Provider.of<GoogleSignProvider>(context, listen:false);
+                                          onPressed: () {
+                                            final provider =
+                                                Provider.of<GoogleSignProvider>(
+                                                    context,
+                                                    listen: false);
                                             provider.googleLogin();
                                             Navigator.pop(context);
                                           },
-                                          icon: const FaIcon(FontAwesomeIcons.google),
-                                          label:  const Text('Login With Google')),
-
+                                          icon: const FaIcon(
+                                              FontAwesomeIcons.google),
+                                          label:
+                                              const Text('Login With Google')),
                                     ),
                                     const SizedBox(
                                       height: 30,
@@ -155,7 +159,8 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                                             foregroundColor: Colors.red,
                                           ),
                                           onPressed: onPressed,
-                                          child: const Text('Login With Mobile')),
+                                          child:
+                                              const Text('Login With Mobile')),
                                     ),
                                   ],
                                 ),
@@ -169,8 +174,8 @@ class _OnbodingScreenState extends State<OnbodingScreen> {
                         child: Text('Get Started',
                             style: GoogleFonts.poppins(
                                 textStyle: const TextStyle(
-                                  fontSize: 24,
-                                 fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
                               color: Color.fromRGBO(183, 150, 243, 1.0),
                             ))),
                       ),
