@@ -1,9 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class FeatureScreen extends StatelessWidget {
-  const FeatureScreen({Key? key}) : super(key: key);
+  const FeatureScreen({Key? key, required File image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

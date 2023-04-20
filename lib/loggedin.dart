@@ -13,17 +13,22 @@ class LoggedIn extends StatefulWidget {
 
 class _LoggedInState extends State<LoggedIn> {
   File? _image;
-
   Future getImage(ImageSource source) async {
     try {
       final image = await ImagePicker().pickImage(source: source);
       if (image == null) {
-        return FeatureScreen();
+        return;
       }
       final imageTemporary = File(image.path);
       setState(() {
         this._image = imageTemporary;
       });
+
+      // Navigate to FeatureScreen
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => FeatureScreen(image: _image!)),
+      );
     } on PlatformException catch (e) {
       print('Failed to Pick Image $e');
     }
@@ -53,21 +58,12 @@ class _LoggedInState extends State<LoggedIn> {
                   Icons.home,
                 ),
                 title: const Text("page 1"),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => FeatureScreen(),
-                    ),
-                  );
-                },
+                onTap: () {},
               ),
               ListTile(
                 leading: const Icon(Icons.train),
                 title: const Text("Page 2"),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () {},
               ),
             ],
           ),
