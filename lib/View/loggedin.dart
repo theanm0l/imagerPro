@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,6 @@ import 'package:project_new/View//feature_screen.dart';
 
 class LoggedIn extends StatefulWidget {
   const LoggedIn({super.key});
-
   @override
   State<LoggedIn> createState() => _LoggedInState();
 }
