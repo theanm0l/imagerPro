@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:project_new/View//feature_screen.dart';
+import 'settings_screen.dart';
+import 'package:rive/rive.dart';
 
 class LoggedIn extends StatefulWidget {
   const LoggedIn({super.key});
@@ -35,6 +37,7 @@ class _LoggedInState extends State<LoggedIn> {
     }
   }
 
+
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
   @override
@@ -45,10 +48,15 @@ class _LoggedInState extends State<LoggedIn> {
       home: Scaffold(
         appBar: AppBar(elevation: 0, backgroundColor: Colors.blue),
         drawer: Drawer(
+          width: 240,
+          elevation: 2,
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              const DrawerHeader(
+               DrawerHeader(
+                 
+                 padding: EdgeInsets.zero,
+                margin: EdgeInsets.all(50),
                 decoration: BoxDecoration(
                   color: Colors.blue,
                 ),
@@ -64,7 +72,13 @@ class _LoggedInState extends State<LoggedIn> {
               ListTile(
                 leading: const Icon(Icons.train),
                 title: const Text("Page 2"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      (context),
+                      MaterialPageRoute(
+                      builder: (context) => (SettingsScreen()),)
+                  );
+                },
               ),
             ],
           ),
