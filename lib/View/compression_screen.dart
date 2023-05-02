@@ -5,6 +5,7 @@ import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 import 'package:rive/rive.dart';
 
+
 class CompressionScreen extends StatefulWidget {
   final File image;
 

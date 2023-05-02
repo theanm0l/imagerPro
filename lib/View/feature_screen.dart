@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_new/View/compression_screen.dart';
+import 'package:project_new/View/converter_screen.dart';
+import 'package:project_new/View/cropping_screen.dart';
 
 class FeatureScreen extends StatelessWidget {
   final File? image;
@@ -46,7 +48,16 @@ class FeatureScreen extends StatelessWidget {
             height: 60,
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+
+              Navigator.push(
+                (context),
+                MaterialPageRoute(
+                    builder: (context) => CroppingScreen(
+                      image: image!,
+                    )),
+              );
+            },
             child: Container(
               padding: EdgeInsets.all(30),
               margin: EdgeInsets.all(10),
@@ -146,7 +157,16 @@ class FeatureScreen extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+
+              Navigator.push(
+                (context),
+                MaterialPageRoute(
+                    builder: (context) => ConverterScreen(
+                      image: image!,
+                    )),
+              );
+            },
             child: Container(
               padding: EdgeInsets.all(30),
               margin: EdgeInsets.all(10),
