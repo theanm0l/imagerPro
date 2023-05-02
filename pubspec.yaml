@@ -53,6 +53,7 @@ dependencies:
   image_size_getter: ^2.1.2
   pdf: ^3.10.1
   image_cropper: ^3.0.3
+  dotted_border: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:

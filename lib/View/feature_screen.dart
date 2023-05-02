@@ -1,11 +1,11 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_new/View/compression_screen.dart';
 import 'package:project_new/View/converter_screen.dart';
 import 'package:project_new/View/cropping_screen.dart';
+
 
 class FeatureScreen extends StatelessWidget {
   final File? image;
@@ -54,7 +54,7 @@ class FeatureScreen extends StatelessWidget {
                 (context),
                 MaterialPageRoute(
                     builder: (context) => CroppingScreen(
-                      image: image!,
+                      image: image!, title: '',
                     )),
               );
             },

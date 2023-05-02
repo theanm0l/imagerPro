@@ -79,7 +79,9 @@ class _ConverterScreenState extends State<ConverterScreen> {
       final dir = await getExternalStorageDirectory();
       print(dir?.path);
       final path = '/storage/emulated/0/Download'; // change the path to the directory where you want to save the file
-      final file = File('$path/filename.pdf');
+      final timestamp = DateTime.now().millisecondsSinceEpoch;
+      final fileName = 'file_$timestamp.pdf';
+      final file = File('$path/$fileName');
 
       await file.writeAsBytes(await pdf.save());
       showPrintedMessage('success', 'saved to documents');
